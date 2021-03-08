@@ -11,6 +11,13 @@ body{
     color: rgb(145, 145, 145);
 }
 
+.main_heading{
+    display: flex;
+    margin: 2em;
+    justify-content: center;
+    color:white;
+}
+
 .main_box{
     height: 100%;
     width: 100%;
@@ -59,6 +66,9 @@ body{
     margin-bottom: .5em;
 }
 
+.timeline-data{
+    animation: move 3s;
+}
 
 /* this is used for creating our time-line responsive for
     both laptops and mobile-phone */
@@ -107,12 +117,25 @@ body{
     }
     .timeline ul li:hover::after{
         background-color: chartreuse;
+        transform: scale(2em);
+
     }
     .timeline li:hover{
         background-color: rgb(70, 70, 255);
+        /* animation: move 3s; */
     }
     .date{
         position: absolute;
         top: -2em;
+    }
+}
+
+
+@keyframes move{
+    0%{
+        transform: translate(-30em);
+    }
+    100%{
+        transform: translate(0em);
     }
 }
